@@ -15,18 +15,9 @@
         "value": "(;|#!).*\\n?"
       }
     },
-    "dis_expr": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "#_"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_form"
-        }
-      ]
+    "dis_marker": {
+      "type": "STRING",
+      "value": "#_"
     },
     "_form": {
       "type": "CHOICE",
@@ -137,7 +128,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dis_expr"
+          "name": "dis_marker"
         }
       ]
     },

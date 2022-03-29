@@ -225,9 +225,8 @@ module.exports = grammar({
     comment: $ =>
       COMMENT,
 
-    dis_expr: $ =>
-      seq("#_",
-          $._form),
+    dis_marker: $ =>
+      "#_",
 
     _form: $ =>
       choice(// atom-ish
@@ -261,8 +260,8 @@ module.exports = grammar({
              $.unquoting_lit,
              // metadata
              $.meta_lit,
-             // disabled expression
-             $.dis_expr),
+             // discard marker
+             $.dis_marker),
 
     num_lit: $ =>
       NUMBER,
@@ -287,11 +286,7 @@ module.exports = grammar({
 
     meta_lit: $ =>
       seq(choice("^", "#^"), // XXX: could this have problems?
-          choice($.read_cond_lit,
-                 $.map_lit,
-                 $.str_lit,
-                 $.kwd_lit,
-                 $.sym_lit)),
+          $._form),
 
     list_lit: $ =>
       seq("(",
@@ -341,6 +336,7 @@ module.exports = grammar({
     ns_map_lit: $ =>
       seq("#",
           choice($.auto_res_mark,
+                 // XXX: make up something else for kwd_lit here?
                  $.kwd_lit),
           "{",
           repeat($._form),
@@ -358,10 +354,7 @@ module.exports = grammar({
 
     evaling_lit: $ =>
       seq("#=",
-          choice($.list_lit,
-                 $.read_cond_lit,
-                 // #= ^:a java.lang.String
-                 $.sym_lit)),
+          $._form),
 
     // #uuid "00000000-0000-0000-0000-000000000000"
     // #user.Fun[1 2]
