@@ -2,12 +2,12 @@
 Symbol Metadata
 ================================================================================
 
-^String []
+#^String []
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (sym_lit)
   (vec_lit))
 
@@ -15,12 +15,12 @@ Symbol Metadata
 Keyword Metadata
 ================================================================================
 
-^:private {}
+#^:private {}
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (kwd_lit)
   (map_lit))
 
@@ -28,12 +28,12 @@ Keyword Metadata
 String Metadata
 ================================================================================
 
-^"gnarly" {}
+#^"gnarly" {}
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (str_lit)
   (map_lit))
 
@@ -41,12 +41,12 @@ String Metadata
 Map Metadata
 ================================================================================
 
-^{:x 0 :y 1} #{}
+#^{:x 0 :y 1} #{}
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (map_lit
     (kwd_lit)
     (num_lit)
@@ -58,12 +58,12 @@ Map Metadata
 Reader Conditional Metadata
 ================================================================================
 
-^#?(:clj "vanilla" :cljr "strawberry" :cljs "chocolate") []
+#^#?(:clj "vanilla" :cljr "strawberry" :cljs "chocolate") []
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (read_cond_lit
     (kwd_lit)
     (str_lit)
@@ -77,16 +77,15 @@ Reader Conditional Metadata
 Multiple Bits of Metadata
 ================================================================================
 
-^:wake ^:sit ^:sleep #{}
+#^:wake #^:sit #^:sleep #{}
 
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (kwd_lit)
-  (meta_marker)
+  (old_meta_marker)
   (kwd_lit)
-  (meta_marker)
+  (old_meta_marker)
   (kwd_lit)
   (set_lit))
-
