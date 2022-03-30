@@ -19,6 +19,19 @@
       "type": "STRING",
       "value": "#_"
     },
+    "meta_marker": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "^"
+        },
+        {
+          "type": "STRING",
+          "value": "#^"
+        }
+      ]
+    },
     "_form": {
       "type": "CHOICE",
       "members": [
@@ -124,7 +137,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "meta_lit"
+          "name": "meta_marker"
         },
         {
           "type": "SYMBOL",
@@ -688,49 +701,6 @@
         ]
       }
     },
-    "meta_lit": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "^"
-            },
-            {
-              "type": "STRING",
-              "value": "#^"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "read_cond_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "map_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "str_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "kwd_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "sym_lit"
-            }
-          ]
-        }
-      ]
-    },
     "list_lit": {
       "type": "SEQ",
       "members": [
@@ -1015,21 +985,8 @@
           "value": "#="
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "list_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "read_cond_lit"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "sym_lit"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_form"
         }
       ]
     },

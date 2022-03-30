@@ -7,8 +7,8 @@ Symbol Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (sym_lit))
+  (meta_marker)
+  (sym_lit)
   (vec_lit))
 
 ================================================================================
@@ -20,8 +20,8 @@ Keyword Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (kwd_lit))
+  (meta_marker)
+  (kwd_lit)
   (map_lit))
 
 ================================================================================
@@ -33,8 +33,8 @@ String Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (str_lit))
+  (meta_marker)
+  (str_lit)
   (map_lit))
 
 ================================================================================
@@ -46,12 +46,12 @@ Map Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (map_lit
-      (kwd_lit)
-      (num_lit)
-      (kwd_lit)
-      (num_lit)))
+  (meta_marker)
+  (map_lit
+    (kwd_lit)
+    (num_lit)
+    (kwd_lit)
+    (num_lit))
   (set_lit))
 
 ================================================================================
@@ -63,14 +63,14 @@ Reader Conditional Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (read_cond_lit
-      (kwd_lit)
-      (str_lit)
-      (kwd_lit)
-      (str_lit)
-      (kwd_lit)
-      (str_lit)))
+  (meta_marker)
+  (read_cond_lit
+    (kwd_lit)
+    (str_lit)
+    (kwd_lit)
+    (str_lit)
+    (kwd_lit)
+    (str_lit))
   (vec_lit))
 
 ================================================================================
@@ -82,12 +82,12 @@ Multiple Bits of Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
-    (kwd_lit))
-  (meta_lit
-    (kwd_lit))
-  (meta_lit
-    (kwd_lit))
+  (meta_marker)
+  (kwd_lit)
+  (meta_marker)
+  (kwd_lit)
+  (meta_marker)
+  (kwd_lit)
   (set_lit))
 
 ================================================================================
@@ -99,16 +99,16 @@ Deprecated Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_lit
+  (meta_marker)
+  (kwd_lit)
+  (meta_marker)
+  (str_lit)
+  (meta_marker)
+  (sym_lit)
+  (meta_marker)
+  (map_lit
+    (kwd_lit)
+    (kwd_lit)
+    (kwd_lit)
     (kwd_lit))
-  (meta_lit
-    (str_lit))
-  (meta_lit
-    (sym_lit))
-  (meta_lit
-    (map_lit
-      (kwd_lit)
-      (kwd_lit)
-      (kwd_lit)
-      (kwd_lit)))
   (set_lit))

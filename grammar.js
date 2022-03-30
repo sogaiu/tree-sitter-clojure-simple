@@ -228,6 +228,9 @@ module.exports = grammar({
     dis_marker: $ =>
       "#_",
 
+    meta_marker: $ =>
+      choice("^", "#^"),
+
     _form: $ =>
       choice(// atom-ish
              $.num_lit,
@@ -258,8 +261,8 @@ module.exports = grammar({
              $.syn_quoting_lit,
              $.unquote_splicing_lit,
              $.unquoting_lit,
-             // metadata
-             $.meta_lit,
+             // metadata marker
+             $.meta_marker,
              // discard marker
              $.dis_marker),
 
@@ -283,10 +286,6 @@ module.exports = grammar({
 
     sym_lit: $ =>
       SYMBOL,
-
-    meta_lit: $ =>
-      seq(choice("^", "#^"), // XXX: could this have problems?
-          $._form),
 
     list_lit: $ =>
       seq("(",

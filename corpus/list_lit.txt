@@ -95,6 +95,6 @@ Call with Symbol with Metadata
 (source
   (list_lit
     (sym_lit)
-    (meta_lit
-      (sym_lit))
+    (meta_marker)
+    (sym_lit)
     (sym_lit)))
