@@ -24,10 +24,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -41,10 +37,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -123,7 +115,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -143,10 +135,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -160,10 +148,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -242,7 +226,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -262,10 +246,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -279,10 +259,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -381,10 +357,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -398,10 +370,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -500,10 +468,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -517,10 +481,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -595,11 +555,6 @@
     }
   },
   {
-    "type": "meta_marker",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "ns_map_lit",
     "named": true,
     "fields": {},
@@ -628,10 +583,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -645,10 +596,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -727,7 +674,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -747,10 +694,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -764,10 +707,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -866,10 +805,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -883,10 +818,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -985,10 +916,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1002,10 +929,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1104,10 +1027,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1121,10 +1040,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1223,10 +1138,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1240,10 +1151,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1322,17 +1229,9 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
-          "named": true
-        },
         {
           "type": "sym_lit",
           "named": true
@@ -1345,7 +1244,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -1365,10 +1264,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1382,10 +1277,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1484,10 +1375,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1501,10 +1388,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1583,7 +1466,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -1603,10 +1486,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1620,10 +1499,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1702,7 +1577,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -1722,10 +1597,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1739,10 +1610,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1821,7 +1688,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -1841,10 +1708,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1858,10 +1721,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -1960,10 +1819,6 @@
           "named": true
         },
         {
-          "type": "dis_marker",
-          "named": true
-        },
-        {
           "type": "evaling_lit",
           "named": true
         },
@@ -1977,10 +1832,6 @@
         },
         {
           "type": "map_lit",
-          "named": true
-        },
-        {
-          "type": "meta_marker",
           "named": true
         },
         {
@@ -2079,10 +1930,6 @@
     "named": false
   },
   {
-    "type": "#^",
-    "named": false
-  },
-  {
     "type": "'",
     "named": false
   },
@@ -2104,10 +1951,6 @@
   },
   {
     "type": "]",
-    "named": false
-  },
-  {
-    "type": "^",
     "named": false
   },
   {
@@ -2139,11 +1982,19 @@
     "named": true
   },
   {
+    "type": "meta_marker",
+    "named": true
+  },
+  {
     "type": "nil_lit",
     "named": true
   },
   {
     "type": "num_lit",
+    "named": true
+  },
+  {
+    "type": "old_meta_marker",
     "named": true
   },
   {

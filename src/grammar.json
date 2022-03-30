@@ -4,17 +4,8 @@
     "source": {
       "type": "REPEAT",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "_gap"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "_form"
-          }
-        ]
+        "type": "SYMBOL",
+        "name": "_form"
       }
     },
     "comment": {
@@ -24,35 +15,17 @@
         "value": "(;|#!).*\\n?"
       }
     },
-    "_gap": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "dis_marker"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "meta_marker"
-        }
-      ]
-    },
     "dis_marker": {
       "type": "STRING",
       "value": "#_"
     },
     "meta_marker": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "^"
-        },
-        {
-          "type": "STRING",
-          "value": "#^"
-        }
-      ]
+      "type": "STRING",
+      "value": "^"
+    },
+    "old_meta_marker": {
+      "type": "STRING",
+      "value": "#^"
     },
     "_form": {
       "type": "CHOICE",
@@ -725,17 +698,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -754,17 +718,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -783,17 +738,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -816,17 +762,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -849,17 +786,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -932,17 +860,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -965,17 +884,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -1018,17 +928,8 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_form"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_gap"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "_form"
           }
         },
         {
@@ -1045,13 +946,6 @@
           "value": "#'"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "_form"
         }
@@ -1063,13 +957,6 @@
         {
           "type": "STRING",
           "value": "##"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
         },
         {
           "type": "SYMBOL",
@@ -1085,13 +972,6 @@
           "value": "#="
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "_form"
         }
@@ -1105,22 +985,8 @@
           "value": "#"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "sym_lit"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
         },
         {
           "type": "SYMBOL",
@@ -1136,13 +1002,6 @@
           "value": "@"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "_form"
         }
@@ -1154,13 +1013,6 @@
         {
           "type": "STRING",
           "value": "'"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
         },
         {
           "type": "SYMBOL",
@@ -1176,13 +1028,6 @@
           "value": "`"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "_form"
         }
@@ -1196,13 +1041,6 @@
           "value": "~@"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
-        },
-        {
           "type": "SYMBOL",
           "name": "_form"
         }
@@ -1214,13 +1052,6 @@
         {
           "type": "STRING",
           "value": "~"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_gap"
-          }
         },
         {
           "type": "SYMBOL",
@@ -1243,6 +1074,18 @@
     {
       "type": "SYMBOL",
       "name": "comment"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "dis_marker"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "meta_marker"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "old_meta_marker"
     }
   ],
   "conflicts": [],

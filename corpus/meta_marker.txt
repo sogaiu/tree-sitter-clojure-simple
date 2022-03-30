@@ -99,13 +99,13 @@ Deprecated Metadata
 --------------------------------------------------------------------------------
 
 (source
-  (meta_marker)
+  (old_meta_marker)
   (kwd_lit)
-  (meta_marker)
+  (old_meta_marker)
   (str_lit)
-  (meta_marker)
+  (old_meta_marker)
   (sym_lit)
-  (meta_marker)
+  (old_meta_marker)
   (map_lit
     (kwd_lit)
     (kwd_lit)
