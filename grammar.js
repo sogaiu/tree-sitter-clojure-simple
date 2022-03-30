@@ -220,10 +220,15 @@ module.exports = grammar({
   rules: {
     // THIS MUST BE FIRST -- even though this doesn't look like it matters
     source: $ =>
-      repeat($._form),
+      repeat(choice($._gap,
+                    $._form)),
 
     comment: $ =>
       COMMENT,
+
+    _gap: $ =>
+      choice($.dis_marker,
+             $.meta_marker),
 
     dis_marker: $ =>
       "#_",
@@ -260,11 +265,7 @@ module.exports = grammar({
              $.quoting_lit,
              $.syn_quoting_lit,
              $.unquote_splicing_lit,
-             $.unquoting_lit,
-             // metadata marker
-             $.meta_marker,
-             // discard marker
-             $.dis_marker),
+             $.unquoting_lit),
 
     num_lit: $ =>
       NUMBER,
@@ -289,29 +290,29 @@ module.exports = grammar({
 
     list_lit: $ =>
       seq("(",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           ")"),
 
     map_lit: $ =>
       seq("{",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           "}"),
 
     vec_lit: $ =>
       seq("[",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           "]"),
 
     set_lit: $ =>
       seq("#",
           "{",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           "}"),
 
     anon_fn_lit: $ =>
       seq("#",
           "(",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           ")"),
 
     regex_lit: $ =>
@@ -320,13 +321,13 @@ module.exports = grammar({
     read_cond_lit: $ =>
       seq("#?",
           "(",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           ")"),
 
     splicing_read_cond_lit: $ =>
       seq("#?@",
           "(",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           ")"),
 
     auto_res_mark: $ =>
@@ -338,21 +339,24 @@ module.exports = grammar({
                  // XXX: make up something else for kwd_lit here?
                  $.kwd_lit),
           "{",
-          repeat($._form),
+          repeat(choice($._form, $._gap)),
           "}"),
 
     var_quoting_lit: $ =>
       seq("#'",
           // XXX: symbol, reader conditional, and tagged literal can work
           //      any other things?
+          repeat($._gap),
           $._form),
 
     sym_val_lit: $ =>
       seq("##",
+          repeat($._gap),
           $.sym_lit),
 
     evaling_lit: $ =>
       seq("#=",
+          repeat($._gap),
           $._form),
 
     // #uuid "00000000-0000-0000-0000-000000000000"
@@ -364,27 +368,34 @@ module.exports = grammar({
           // # #_ 1 uuid "00000000-0000-0000-0000-000000000000"
           // etc.
           // # ^:a uuid "00000000-0000-0000-0000-000000000000"
+          repeat($._gap),
           $.sym_lit,
+          repeat($._gap),
           $._form),
 
     derefing_lit: $ =>
       seq("@",
+          repeat($._gap),
           $._form),
 
     quoting_lit: $ =>
       seq("'",
+          repeat($._gap),
           $._form),
 
     syn_quoting_lit: $ =>
       seq("`",
+          repeat($._gap),
           $._form),
 
     unquote_splicing_lit: $ =>
       seq("~@",
+          repeat($._gap),
           $._form),
 
     unquoting_lit: $ =>
       seq("~",
+          repeat($._gap),
           $._form),
   }
 });
