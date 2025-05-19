@@ -1005,6 +1005,7 @@
   {
     "type": "source",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -1971,11 +1972,13 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "dis_marker",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "kwd_lit",
@@ -1983,7 +1986,8 @@
   },
   {
     "type": "meta_marker",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "nil_lit",
@@ -1995,7 +1999,8 @@
   },
   {
     "type": "old_meta_marker",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "regex_lit",
