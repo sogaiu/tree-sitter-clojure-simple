@@ -335,14 +335,12 @@ module.exports = grammar({
           "]"),
 
     set_lit: $ =>
-      seq("#",
-          "{",
+      seq("#{",
           repeat($._form),
           "}"),
 
     anon_fn_lit: $ =>
-      seq("#",
-          "(",
+      seq("#(",
           repeat($._form),
           ")"),
 

@@ -749,11 +749,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "#"
-        },
-        {
-          "type": "STRING",
-          "value": "{"
+          "value": "#{"
         },
         {
           "type": "REPEAT",
@@ -773,11 +769,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "#"
-        },
-        {
-          "type": "STRING",
-          "value": "("
+          "value": "#("
         },
         {
           "type": "REPEAT",
