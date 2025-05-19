@@ -79,7 +79,6 @@ const RADIX_NUMBER =
           regex('[rR]'),
           repeat1(ALPHANUMERIC));
 
-// XXX: not accounting for division by zero
 const RATIO =
       seq(repeat1(DIGIT),
           "/",
@@ -178,9 +177,6 @@ const OCTAL_CHAR =
           choice(seq(DIGIT, DIGIT, DIGIT),
                  seq(DIGIT, DIGIT),
                  DIGIT));
-          // choice(seq(/[0-3]/, OCTAL_DIGIT, OCTAL_DIGIT),
-          //        seq(OCTAL_DIGIT, OCTAL_DIGIT),
-          //        seq(OCTAL_DIGIT)));
 
 const NAMED_CHAR =
       choice("backspace",
@@ -236,7 +232,6 @@ const SYMBOL_BODY =
 
 // XXX: no attempt is made to enforce certain complex things, e.g.
 //
-//        Symbols beginning or ending with ':' are reserved by Clojure.
 //        A symbol can contain one or more non-repeating ':'s
 const SYMBOL =
       token(seq(SYMBOL_HEAD,
@@ -425,3 +420,4 @@ module.exports = grammar({
           $._form),
   }
 });
+
