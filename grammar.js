@@ -154,7 +154,7 @@ const OCTAL_CHAR =
       seq("o",
           choice(seq(DIGIT, DIGIT, DIGIT),
                  seq(DIGIT, DIGIT),
-                 seq(DIGIT)));
+                 DIGIT));
           // choice(seq(/[0-3]/, OCTAL_DIGIT, OCTAL_DIGIT),
           //        seq(OCTAL_DIGIT, OCTAL_DIGIT),
           //        seq(OCTAL_DIGIT)));
