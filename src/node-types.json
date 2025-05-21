@@ -2,29 +2,140 @@
   {
     "type": "anon_fn_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": ")",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#(",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -32,95 +143,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -134,29 +161,130 @@
   {
     "type": "derefing_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "@",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -164,95 +292,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -261,29 +305,130 @@
   {
     "type": "evaling_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#=",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -291,95 +436,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -438,29 +499,140 @@
   {
     "type": "list_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": ")",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -468,95 +640,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -565,29 +653,140 @@
   {
     "type": "map_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "{",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -595,95 +794,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -692,33 +807,164 @@
   {
     "type": "ns_map_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "{",
+            "named": false
+          }
+        ]
+      },
+      "prefix": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "auto_res_mark",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "auto_res_mark",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -726,95 +972,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -823,29 +985,130 @@
   {
     "type": "quoting_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "'",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -853,95 +1116,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -950,29 +1129,150 @@
   {
     "type": "read_cond_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": ")",
+            "named": false
+          }
+        ]
+      },
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#?",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -980,95 +1280,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1077,29 +1293,140 @@
   {
     "type": "set_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#{",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1107,95 +1434,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1332,29 +1575,150 @@
   {
     "type": "splicing_read_cond_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": ")",
+            "named": false
+          }
+        ]
+      },
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#?@",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1362,95 +1726,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1495,10 +1775,127 @@
   {
     "type": "sym_val_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "##",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "comment",
@@ -1514,10 +1911,6 @@
         },
         {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
           "named": true
         }
       ]
@@ -1526,29 +1919,130 @@
   {
     "type": "syn_quoting_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "`",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1556,95 +2050,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1653,29 +2063,140 @@
   {
     "type": "tagged_or_ctor_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          }
+        ]
+      },
+      "tag": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "sym_lit",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1683,95 +2204,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1780,29 +2217,130 @@
   {
     "type": "unquote_splicing_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "~@",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1810,95 +2348,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -1907,29 +2361,130 @@
   {
     "type": "unquoting_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "~",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -1937,95 +2492,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -2034,29 +2505,130 @@
   {
     "type": "var_quoting_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#'",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -2064,95 +2636,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]
@@ -2161,29 +2649,140 @@
   {
     "type": "vec_lit",
     "named": true,
-    "fields": {},
+    "fields": {
+      "close": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "]",
+            "named": false
+          }
+        ]
+      },
+      "open": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "[",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "anon_fn_lit",
+            "named": true
+          },
+          {
+            "type": "bool_lit",
+            "named": true
+          },
+          {
+            "type": "char_lit",
+            "named": true
+          },
+          {
+            "type": "derefing_lit",
+            "named": true
+          },
+          {
+            "type": "evaling_lit",
+            "named": true
+          },
+          {
+            "type": "kwd_lit",
+            "named": true
+          },
+          {
+            "type": "list_lit",
+            "named": true
+          },
+          {
+            "type": "map_lit",
+            "named": true
+          },
+          {
+            "type": "nil_lit",
+            "named": true
+          },
+          {
+            "type": "ns_map_lit",
+            "named": true
+          },
+          {
+            "type": "num_lit",
+            "named": true
+          },
+          {
+            "type": "quoting_lit",
+            "named": true
+          },
+          {
+            "type": "read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "regex_lit",
+            "named": true
+          },
+          {
+            "type": "set_lit",
+            "named": true
+          },
+          {
+            "type": "splicing_read_cond_lit",
+            "named": true
+          },
+          {
+            "type": "str_lit",
+            "named": true
+          },
+          {
+            "type": "sym_lit",
+            "named": true
+          },
+          {
+            "type": "sym_val_lit",
+            "named": true
+          },
+          {
+            "type": "syn_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "tagged_or_ctor_lit",
+            "named": true
+          },
+          {
+            "type": "unquote_splicing_lit",
+            "named": true
+          },
+          {
+            "type": "unquoting_lit",
+            "named": true
+          },
+          {
+            "type": "var_quoting_lit",
+            "named": true
+          },
+          {
+            "type": "vec_lit",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "anon_fn_lit",
-          "named": true
-        },
-        {
-          "type": "bool_lit",
-          "named": true
-        },
-        {
-          "type": "char_lit",
-          "named": true
-        },
-        {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "derefing_lit",
           "named": true
         },
         {
@@ -2191,95 +2790,11 @@
           "named": true
         },
         {
-          "type": "evaling_lit",
-          "named": true
-        },
-        {
-          "type": "kwd_lit",
-          "named": true
-        },
-        {
-          "type": "list_lit",
-          "named": true
-        },
-        {
-          "type": "map_lit",
-          "named": true
-        },
-        {
           "type": "meta_marker",
           "named": true
         },
         {
-          "type": "nil_lit",
-          "named": true
-        },
-        {
-          "type": "ns_map_lit",
-          "named": true
-        },
-        {
-          "type": "num_lit",
-          "named": true
-        },
-        {
           "type": "old_meta_marker",
-          "named": true
-        },
-        {
-          "type": "quoting_lit",
-          "named": true
-        },
-        {
-          "type": "read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "regex_lit",
-          "named": true
-        },
-        {
-          "type": "set_lit",
-          "named": true
-        },
-        {
-          "type": "splicing_read_cond_lit",
-          "named": true
-        },
-        {
-          "type": "str_lit",
-          "named": true
-        },
-        {
-          "type": "sym_lit",
-          "named": true
-        },
-        {
-          "type": "sym_val_lit",
-          "named": true
-        },
-        {
-          "type": "syn_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "tagged_or_ctor_lit",
-          "named": true
-        },
-        {
-          "type": "unquote_splicing_lit",
-          "named": true
-        },
-        {
-          "type": "unquoting_lit",
-          "named": true
-        },
-        {
-          "type": "var_quoting_lit",
-          "named": true
-        },
-        {
-          "type": "vec_lit",
           "named": true
         }
       ]

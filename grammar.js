@@ -257,10 +257,8 @@ module.exports = grammar({
   rules: {
     // THIS MUST BE FIRST -- even though this doesn't look like it matters
     source: $ =>
-      repeat($._any),
-
-    _any: $ =>
-      choice($._form, $._gap),
+      repeat(choice($._form,
+                    $._gap)),
 
     _gap: $ =>
       choice($._ws,
@@ -376,115 +374,123 @@ module.exports = grammar({
                           $.sym_name)),
 
     list_lit: $ =>
-      seq("(",
-          repeat($._any),
-          ")"),
+      seq(field('open', "("),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', ")")),
 
     map_lit: $ =>
-      seq("{",
-          repeat($._any),
-          "}"),
+      seq(field('open', "{"),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', "}")),
 
     vec_lit: $ =>
-      seq("[",
-          repeat($._any),
-          "]"),
+      seq(field('open', "["),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', "]")),
 
     set_lit: $ =>
-      seq("#{",
-          repeat($._any),
-          "}"),
+      seq(field('open', "#{"),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', "}")),
 
     anon_fn_lit: $ =>
-      seq("#(",
-          repeat($._any),
-          ")"),
+      seq(field('open', "#("),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', ")")),
 
     regex_lit: $ =>
       REGEX,
 
     read_cond_lit: $ =>
-      seq("#?",
+      seq(field('marker', "#?"),
           repeat($._ws),
-          "(",
-          repeat($._any),
-          ")"),
+          field('open', "("),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', ")")),
 
     splicing_read_cond_lit: $ =>
-      seq("#?@",
+      seq(field('marker', "#?@"),
           repeat($._ws),
-          "(",
-          repeat($._any),
-          ")"),
+          field('open', "("),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', ")")),
 
     auto_res_mark: $ =>
       AUTO_RESOLVE_MARK,
 
     ns_map_lit: $ =>
-      seq("#",
-          choice($.auto_res_mark,
-                 // XXX: make up something else for kwd_lit here?
-                 $.kwd_lit),
+      seq(field('marker', "#"),
+          field('prefix', choice($.auto_res_mark,
+                                 // XXX: make up something else for kwd_lit here?
+                                 $.kwd_lit)),
           repeat($._gap),
-          "{",
-          repeat($._any),
-          "}"),
+          field('open', "{"),
+          repeat(choice(field('value', $._form),
+                        $._gap)),
+          field('close', "}")),
 
     var_quoting_lit: $ =>
-      seq("#'",
+      seq(field('marker', "#'"),
           repeat($._gap),
           // XXX: symbol, reader conditional, and tagged literal can work
           //      any other things?
-          $._form),
+          field('value', $._form)),
 
     sym_val_lit: $ =>
-      seq("##",
+      seq(field('marker', "##"),
           repeat($._gap),
-          $.sym_lit),
+          field('value', $._form)),
 
     evaling_lit: $ =>
-      seq("#=",
+      seq(field('marker', "#="),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     // #uuid "00000000-0000-0000-0000-000000000000"
     // #user.Fun[1 2]
     // #user.Fun{:a 1 :b 2}
     tagged_or_ctor_lit: $ =>
-      seq("#",
+      seq(field('marker', "#"),
           // # uuid "00000000-0000-0000-0000-000000000000"
           // # #_ 1 uuid "00000000-0000-0000-0000-000000000000"
           // etc.
           repeat($._gap),
           // # ^:a uuid "00000000-0000-0000-0000-000000000000"
-          $.sym_lit,
+          field('tag', $.sym_lit),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     derefing_lit: $ =>
-      seq("@",
+      seq(field('marker', "@"),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     quoting_lit: $ =>
-      seq("'",
+      seq(field('marker', "'"),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     syn_quoting_lit: $ =>
-      seq("`",
+      seq(field('marker', "`"),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     unquote_splicing_lit: $ =>
-      seq("~@",
+      seq(field('marker', "~@"),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
 
     unquoting_lit: $ =>
-      seq("~",
+      seq(field('marker', "~"),
           repeat($._gap),
-          $._form),
+          field('value', $._form)),
   }
 });
 
