@@ -263,7 +263,7 @@ module.exports = grammar({
     _gap: $ =>
       choice($._ws,
              $.comment,
-             $.dis_marker,
+             $.dis_expr,
              $.meta_marker,
              $.old_meta_marker),
 
@@ -273,8 +273,10 @@ module.exports = grammar({
     comment: $ =>
       COMMENT,
 
-    dis_marker: $ =>
-      "#_",
+    dis_expr: $ =>
+      seq(field('marker', "#_"),
+          repeat($._gap),
+          field('value', $._form)),
 
     meta_marker: $ =>
       "^",

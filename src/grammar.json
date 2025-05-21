@@ -31,7 +31,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dis_marker"
+          "name": "dis_expr"
         },
         {
           "type": "SYMBOL",
@@ -60,9 +60,33 @@
         "value": "(;|#!).*\\n?"
       }
     },
-    "dis_marker": {
-      "type": "STRING",
-      "value": "#_"
+    "dis_expr": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "marker",
+          "content": {
+            "type": "STRING",
+            "value": "#_"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_gap"
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_form"
+          }
+        }
+      ]
     },
     "meta_marker": {
       "type": "STRING",
