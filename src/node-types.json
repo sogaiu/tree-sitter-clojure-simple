@@ -20,7 +20,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -40,6 +48,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -49,6 +61,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -111,11 +127,16 @@
     }
   },
   {
+    "type": "auto_res_mark",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "derefing_lit",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -131,7 +152,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -151,6 +180,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -160,6 +193,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -226,7 +263,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -242,7 +279,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -262,6 +307,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -271,6 +320,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -333,6 +386,56 @@
     }
   },
   {
+    "type": "kwd_lit",
+    "named": true,
+    "fields": {
+      "delimiter": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "/",
+            "named": false
+          }
+        ]
+      },
+      "marker": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": ":",
+            "named": false
+          },
+          {
+            "type": "::",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "kwd_name",
+            "named": true
+          }
+        ]
+      },
+      "namespace": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "kwd_ns",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "list_lit",
     "named": true,
     "fields": {},
@@ -353,7 +456,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -373,6 +484,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -382,6 +497,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -464,7 +583,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -484,6 +611,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -493,6 +624,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -579,7 +714,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -599,6 +742,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -608,6 +755,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -674,7 +825,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -690,7 +841,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -710,6 +869,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -719,6 +882,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -801,7 +968,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -821,6 +996,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -830,6 +1009,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -912,7 +1095,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -932,6 +1123,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -941,6 +1136,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1024,7 +1223,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1044,6 +1251,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1053,6 +1264,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1135,7 +1350,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1155,6 +1378,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1164,6 +1391,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1226,13 +1457,65 @@
     }
   },
   {
+    "type": "sym_lit",
+    "named": true,
+    "fields": {
+      "delimiter": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "/",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "sym_name",
+            "named": true
+          }
+        ]
+      },
+      "namespace": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "sym_ns",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "sym_val_lit",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
+          "named": true
+        },
+        {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
+          "named": true
+        },
         {
           "type": "sym_lit",
           "named": true
@@ -1245,7 +1528,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1261,7 +1544,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1281,6 +1572,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1290,6 +1585,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1372,7 +1671,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1392,6 +1699,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1401,6 +1712,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1467,7 +1782,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1483,7 +1798,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1503,6 +1826,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1512,6 +1839,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1578,7 +1909,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1594,7 +1925,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1614,6 +1953,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1623,6 +1966,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1689,7 +2036,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -1705,7 +2052,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1725,6 +2080,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1734,6 +2093,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1816,7 +2179,15 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "derefing_lit",
+          "named": true
+        },
+        {
+          "type": "dis_marker",
           "named": true
         },
         {
@@ -1836,6 +2207,10 @@
           "named": true
         },
         {
+          "type": "meta_marker",
+          "named": true
+        },
+        {
           "type": "nil_lit",
           "named": true
         },
@@ -1845,6 +2220,10 @@
         },
         {
           "type": "num_lit",
+          "named": true
+        },
+        {
+          "type": "old_meta_marker",
           "named": true
         },
         {
@@ -1951,6 +2330,18 @@
     "named": false
   },
   {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
+    "named": false
+  },
+  {
     "type": "@",
     "named": false
   },
@@ -1967,10 +2358,6 @@
     "named": false
   },
   {
-    "type": "auto_res_mark",
-    "named": true
-  },
-  {
     "type": "bool_lit",
     "named": true
   },
@@ -1980,22 +2367,23 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "dis_marker",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
-    "type": "kwd_lit",
+    "type": "kwd_name",
+    "named": true
+  },
+  {
+    "type": "kwd_ns",
     "named": true
   },
   {
     "type": "meta_marker",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "nil_lit",
@@ -2007,8 +2395,7 @@
   },
   {
     "type": "old_meta_marker",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "regex_lit",
@@ -2019,7 +2406,11 @@
     "named": true
   },
   {
-    "type": "sym_lit",
+    "type": "sym_name",
+    "named": true
+  },
+  {
+    "type": "sym_ns",
     "named": true
   },
   {

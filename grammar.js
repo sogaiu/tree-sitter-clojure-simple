@@ -130,28 +130,20 @@ const KEYWORD_HEAD =
             "]");
 
 const KEYWORD_BODY =
-      choice(regex("[:'/]"),
-             KEYWORD_HEAD);
+      choice(regex("[:']"), KEYWORD_HEAD);
+
+const KEYWORD_NAMESPACED_BODY =
+      token(repeat1(choice(regex("[:'/]"), KEYWORD_HEAD)));
 
 const KEYWORD_NO_SIGIL =
-      seq(KEYWORD_HEAD,
-          repeat(KEYWORD_BODY));
+      token(seq(KEYWORD_HEAD,
+                repeat(KEYWORD_BODY)));
+
+const KEYWORD_MARK =
+      token(":");
 
 const AUTO_RESOLVE_MARK =
       token("::");
-
-const KEYWORD =
-      token(choice(// :my-ns/hi
-                   // :a
-                   // :/ is neither invalid nor valid, but repl accepts
-                   seq(":",
-                       choice("/",
-                             KEYWORD_NO_SIGIL)),
-                   // ::my-alias/hi
-                   // ::a
-                   // ::/ is invalid
-                   seq(AUTO_RESOLVE_MARK,
-                       KEYWORD_NO_SIGIL)));
 
 const STRING =
       token(seq('"',
@@ -214,7 +206,7 @@ const CHARACTER =
 const SYMBOL_HEAD =
       regex("[^",
             "\\f\\n\\r\\t ",
-//            "/",
+            "/",
             "()\\[\\]{}",
             '"',
             "@~^;`",
@@ -226,9 +218,16 @@ const SYMBOL_HEAD =
             "\\u2009\\u200a\\u205f\\u3000",
             "]");
 
+const NS_DELIMITER =
+      token("/");
+
 const SYMBOL_BODY =
       choice(SYMBOL_HEAD,
              regex("[:#'0-9]"));
+
+const SYMBOL_NAMESPACED_NAME =
+      token(repeat1(choice(SYMBOL_HEAD,
+                           regex("[/:#'0-9]"))));
 
 // XXX: no attempt is made to enforce certain complex things, e.g.
 //
@@ -241,19 +240,37 @@ module.exports = grammar({
   name: 'clojure_simple',
 
   extras: $ =>
-    [WHITESPACE,
-     $.comment,
-     $.dis_marker,
-     $.meta_marker,
-     $.old_meta_marker],
+    [],
 
   conflicts: $ =>
     [],
 
+  inline: $ =>
+    [$._kwd_leading_slash,
+     $._kwd_just_slash,
+     $._kwd_qualified,
+     $._kwd_unqualified,
+     $._kwd_marker,
+     $._sym_qualified,
+     $._sym_unqualified],
+
   rules: {
     // THIS MUST BE FIRST -- even though this doesn't look like it matters
     source: $ =>
-      repeat($._form),
+      repeat($._any),
+
+    _any: $ =>
+      choice($._form, $._gap),
+
+    _gap: $ =>
+      choice($._ws,
+             $.comment,
+             $.dis_marker,
+             $.meta_marker,
+             $.old_meta_marker),
+
+    _ws: $ =>
+      WHITESPACE,
 
     comment: $ =>
       COMMENT,
@@ -302,7 +319,36 @@ module.exports = grammar({
       NUMBER,
 
     kwd_lit: $ =>
-      KEYWORD,
+      choice($._kwd_leading_slash,
+             $._kwd_just_slash,
+             $._kwd_qualified,
+             $._kwd_unqualified),
+
+    // (namespace :/usr/bin/env) ; => ""
+    // (name :/usr/bin/env) ; => "usr/bin/env"
+    _kwd_leading_slash: $ =>
+      seq(field('marker', $._kwd_marker),
+          field('delimiter', NS_DELIMITER),
+          field('name', alias(KEYWORD_NAMESPACED_BODY, $.kwd_name))),
+
+    // (namespace :/) ;=> nil
+    // (name :/) ;=> "/"
+    _kwd_just_slash: $ =>
+      seq(field('marker', $._kwd_marker),
+          field('name', alias(NS_DELIMITER, $.kwd_name))),
+
+    _kwd_qualified: $ =>
+      prec(2, seq(field('marker', $._kwd_marker),
+                  field('namespace', alias(KEYWORD_NO_SIGIL, $.kwd_ns)),
+                  field('delimiter', NS_DELIMITER),
+                  field('name', alias(KEYWORD_NAMESPACED_BODY, $.kwd_name)))),
+
+    _kwd_unqualified: $ =>
+      prec(1, seq(field('marker', $._kwd_marker),
+                  field('name', alias(KEYWORD_NO_SIGIL, $.kwd_name)))),
+
+    _kwd_marker: $ =>
+      choice(KEYWORD_MARK, AUTO_RESOLVE_MARK),
 
     str_lit: $ =>
       STRING,
@@ -317,31 +363,41 @@ module.exports = grammar({
       BOOLEAN,
 
     sym_lit: $ =>
-      SYMBOL,
+      choice($._sym_qualified, $._sym_unqualified),
+
+    _sym_qualified: $ =>
+      prec(1, seq(field("namespace", alias(SYMBOL, $.sym_ns)),
+                  field("delimiter", NS_DELIMITER),
+                  field("name", alias(SYMBOL_NAMESPACED_NAME, $.sym_name)))),
+
+    _sym_unqualified: $ =>
+      field('name', alias(choice(NS_DELIMITER, // division symbol
+                                 SYMBOL),
+                          $.sym_name)),
 
     list_lit: $ =>
       seq("(",
-          repeat($._form),
+          repeat($._any),
           ")"),
 
     map_lit: $ =>
       seq("{",
-          repeat($._form),
+          repeat($._any),
           "}"),
 
     vec_lit: $ =>
       seq("[",
-          repeat($._form),
+          repeat($._any),
           "]"),
 
     set_lit: $ =>
       seq("#{",
-          repeat($._form),
+          repeat($._any),
           "}"),
 
     anon_fn_lit: $ =>
       seq("#(",
-          repeat($._form),
+          repeat($._any),
           ")"),
 
     regex_lit: $ =>
@@ -349,14 +405,16 @@ module.exports = grammar({
 
     read_cond_lit: $ =>
       seq("#?",
+          repeat($._ws),
           "(",
-          repeat($._form),
+          repeat($._any),
           ")"),
 
     splicing_read_cond_lit: $ =>
       seq("#?@",
+          repeat($._ws),
           "(",
-          repeat($._form),
+          repeat($._any),
           ")"),
 
     auto_res_mark: $ =>
@@ -367,22 +425,26 @@ module.exports = grammar({
           choice($.auto_res_mark,
                  // XXX: make up something else for kwd_lit here?
                  $.kwd_lit),
+          repeat($._gap),
           "{",
-          repeat($._form),
+          repeat($._any),
           "}"),
 
     var_quoting_lit: $ =>
       seq("#'",
+          repeat($._gap),
           // XXX: symbol, reader conditional, and tagged literal can work
           //      any other things?
           $._form),
 
     sym_val_lit: $ =>
       seq("##",
+          repeat($._gap),
           $.sym_lit),
 
     evaling_lit: $ =>
       seq("#=",
+          repeat($._gap),
           $._form),
 
     // #uuid "00000000-0000-0000-0000-000000000000"
@@ -393,28 +455,35 @@ module.exports = grammar({
           // # uuid "00000000-0000-0000-0000-000000000000"
           // # #_ 1 uuid "00000000-0000-0000-0000-000000000000"
           // etc.
+          repeat($._gap),
           // # ^:a uuid "00000000-0000-0000-0000-000000000000"
           $.sym_lit,
+          repeat($._gap),
           $._form),
 
     derefing_lit: $ =>
       seq("@",
+          repeat($._gap),
           $._form),
 
     quoting_lit: $ =>
       seq("'",
+          repeat($._gap),
           $._form),
 
     syn_quoting_lit: $ =>
       seq("`",
+          repeat($._gap),
           $._form),
 
     unquote_splicing_lit: $ =>
       seq("~@",
+          repeat($._gap),
           $._form),
 
     unquoting_lit: $ =>
       seq("~",
+          repeat($._gap),
           $._form),
   }
 });

@@ -21,7 +21,8 @@ Discard List
 (source
   (dis_marker)
   (list_lit
-    (sym_lit)
+    (sym_lit
+      (sym_name))
     (num_lit)
     (num_lit)))
 
@@ -37,9 +38,11 @@ Discard Map
 (source
   (dis_marker)
   (map_lit
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (num_lit)
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (num_lit)))
 
 ================================================================================
@@ -54,15 +57,20 @@ Discard Multiple
 
 (source
   (list_lit
-    (sym_lit)
+    (sym_lit
+      (sym_name))
     (vec_lit
-      (sym_lit)
+      (sym_lit
+        (sym_name))
       (num_lit)
       (dis_marker)
       (dis_marker)
-      (sym_lit)
+      (sym_lit
+        (sym_name))
       (num_lit))
     (list_lit
-      (sym_lit)
-      (sym_lit)
+      (sym_lit
+        (sym_name))
+      (sym_lit
+        (sym_name))
       (num_lit))))

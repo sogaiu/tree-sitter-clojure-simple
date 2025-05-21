@@ -8,7 +8,8 @@ Symbol Metadata
 
 (source
   (meta_marker)
-  (sym_lit)
+  (sym_lit
+    (sym_name))
   (vec_lit))
 
 ================================================================================
@@ -21,7 +22,8 @@ Keyword Metadata
 
 (source
   (meta_marker)
-  (kwd_lit)
+  (kwd_lit
+    (kwd_name))
   (map_lit))
 
 ================================================================================
@@ -48,9 +50,11 @@ Map Metadata
 (source
   (meta_marker)
   (map_lit
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (num_lit)
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (num_lit))
   (set_lit))
 
@@ -65,11 +69,14 @@ Reader Conditional Metadata
 (source
   (meta_marker)
   (read_cond_lit
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (str_lit)
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (str_lit)
-    (kwd_lit)
+    (kwd_lit
+      (kwd_name))
     (str_lit))
   (vec_lit))
 
@@ -83,10 +90,12 @@ Multiple Bits of Metadata
 
 (source
   (meta_marker)
-  (kwd_lit)
+  (kwd_lit
+    (kwd_name))
   (meta_marker)
-  (kwd_lit)
+  (kwd_lit
+    (kwd_name))
   (meta_marker)
-  (kwd_lit)
+  (kwd_lit
+    (kwd_name))
   (set_lit))
-
